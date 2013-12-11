@@ -1,0 +1,124 @@
+$alert-color: #D6665A;
+$base-color: #42282E;
+$base-gradient: none;
+$confirm-color: #75A48B;
+$page-bg-color: lighten(#D9CFB0,15%);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+@font-face {
+    font-family: 'Dinmu';
+    src:url('stylesheets/fonts/dinmu/Dinmu.eot');
+    src:url('stylesheets/fonts/dinmu/Dinmu.eot?#iefix') format('embedded-opentype'),
+        url('stylesheets/fonts/dinmu/Dinmu.ttf') format('truetype'),
+        url('stylesheets/fonts/dinmu/Dinmu.woff') format('woff'),
+        url('stylesheets/fonts/dinmu/Dinmu.svg#Dinmu') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$include-pictos-font: false;
+$include-default-icons: false;
+
+
+@import 'sencha-touch/default';
+@import 'sencha-touch/default/all';
+
+
+@include icon('settings', 's', 'Dinmu');
+
+.rain:before,
+.norain:before {
+    font-family: 'Dinmu';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    padding-right: 10px;
+    font-size: 60px;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.norain:before {
+    content: "\53";
+    color: $confirm-color;
+}
+.rain:before {
+    content: "\52";
+    color: $alert-color;
+}
+
+@include sencha-toolbar-ui('light', #DC9B74, 'none');
+
+.title {
+    .x-title {
+        line-height: 2.5em;
+        text-shadow: none;
+        letter-spacing: -1px;
+        font: {
+		    family: "Lobster";
+		    size: 1.2em;
+		}
+
+    }
+}
+
+.footer {
+    font-size: 0.6em;
+    padding: 12px;
+    text-align: right;
+    letter-spacing: 0;
+    a {
+        color :#000;
+    }
+}
+
+.textview {
+    color: black;
+    line-height: 1.2em;
+    letter-spacing: -1px;
+    padding: 0.8em;
+    text-transform: uppercase;
+	font: {
+	    family: "Oswald";
+	    size: 2em;
+	}
+
+    .yes {
+        color: $alert-color;
+    }
+    .no {
+        color: $confirm-color;
+    }
+    .temp {
+        color: $confirm-color;
+    }
+}
+
+.x-form-fieldset {
+    .x-form-fieldset-inner {
+        border: none;
+        background: $page-bg-color;
+    }
+    .x-form-fieldset-instructions .x-innerhtml {
+        color: #000;
+    }
+}
+
+.x-form-label {
+    background-color: lighten(#DC9B74, 32%);
+}
+.x-toggle-field .x-form-label {
+    background: none;
+    border: none;
+    margin-bottom: 20px;
+}
+.x-toggle {
+    position: absolute;
+    right: 0;
+}

@@ -1,0 +1,318 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main",
+        "requires": [
+            "Ext.MessageBox"
+        ],
+        "stores": [
+            "Settings"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "2c574ea5-4ec0-4d79-bad9-3eb089d0d276",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "main"
+            },
+            "name": "mainView",
+            "designerId": "1ade02fd-9f78-48c6-8a89-a6aea5dbd9ae"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "settingsView",
+                "selector": "settingsview"
+            },
+            "name": "settingsView",
+            "designerId": "6e5edf7e-902d-4c5e-889d-903bfb89f0d4"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "btnSettings",
+                "selector": "main button[action=settings]"
+            },
+            "name": "btnSettings",
+            "designerId": "0955fda1-1ac1-4561-9b7b-7f889b4077db"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "btnRefresh",
+                "selector": "settingsview button[action=refresh]"
+            },
+            "name": "btnRefresh",
+            "designerId": "1c70ebe0-17dd-4000-9b7a-c67f909ebd6b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "btnBack",
+                "selector": "main button[action=back]"
+            },
+            "name": "btnBack",
+            "designerId": "a5e7fe7b-51e5-4afa-97b4-e4a85340778a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "toggleGeo",
+                "selector": "settingsview togglefield"
+            },
+            "name": "toggleGeo",
+            "designerId": "4f1ee234-d058-4eea-99e2-609cdc12bbf9"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "fieldCity",
+                "selector": "settingsview textfield[name=city]"
+            },
+            "name": "fieldCity",
+            "designerId": "2e2271f9-b06f-4f20-b982-ecce9a99129f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "fieldCountry",
+                "selector": "settingsview textfield[name=country]"
+            },
+            "name": "fieldCountry",
+            "designerId": "e7d19451-56b2-44ec-87db-5f114c9c7a6b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "fieldUnits",
+                "selector": "settingsview selectfield"
+            },
+            "name": "fieldUnits",
+            "designerId": "bbe9359d-5731-4599-93e2-93ce20130a3c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "btnRefresh",
+                "designer|targetType": "Ext.Button",
+                "fn": "onRefresh",
+                "implHandler": [
+                    "Ext.Viewport.setMasked({",
+                    "    xtype: 'loadmask',",
+                    "    indicator: true,",
+                    "    message: 'Save Settings...'",
+                    "});",
+                    "",
+                    "var errorstring = \"\";",
+                    "var store = Ext.getStore('Settings');",
+                    "//remove previous settings",
+                    "store.removeAll();",
+                    "store.sync();",
+                    "",
+                    "var model = Ext.create(\"Dinmu.model.Setting\", {});",
+                    "this.getSettingsView().updateRecord(model);",
+                    "var errors = model.validate();",
+                    "",
+                    "if (model.get('geo') !== true && errors.isValid() === false) {",
+                    "    errors.each(function(errorObj) {",
+                    "        errorstring += errorObj.getMessage() + \"<br />\";",
+                    "    });",
+                    "",
+                    "    Ext.Msg.alert(\"Oops\", errorstring);",
+                    "",
+                    "} else {",
+                    "    store.add(model.getData());",
+                    "    store.sync();",
+                    "    Dinmu.utils.Functions.loadData();",
+                    "}",
+                    "",
+                    "Ext.Viewport.unmask();"
+                ],
+                "name": "tap"
+            },
+            "name": "onRefresh",
+            "designerId": "bba68c59-28b2-4d8f-98a1-30f2d25e4db7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "btnSettings",
+                "designer|targetType": "Ext.Button",
+                "fn": "onSettingsBtnTap",
+                "implHandler": [
+                    "this.getMainView().setActiveItem(0);"
+                ],
+                "name": "tap"
+            },
+            "name": "onSettingsBtnTap",
+            "designerId": "a9436f37-0daa-45a8-8214-2360364e85b5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "btnBack",
+                "designer|targetType": "Ext.Button",
+                "fn": "onBackBtnTap",
+                "implHandler": [
+                    "this.getMainView().setActiveItem(1);"
+                ],
+                "name": "tap"
+            },
+            "name": "onBackBtnTap",
+            "designerId": "a52dcaa1-084f-4a6f-85b6-d2c7afafc81e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "toggleGeo",
+                "designer|params": [
+                    "togglefield"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onToggle",
+                "implHandler": [
+                    "if (togglefield.getValue() === 0) {",
+                    "    this.getFieldCity().enable();",
+                    "    this.getFieldCountry().enable();",
+                    "    this.getFieldUnits().enable();",
+                    "",
+                    "    //Dinmu.utils.Functions.loadData();",
+                    "} else {",
+                    "    this.getFieldCity().disable();",
+                    "    this.getFieldUnits().disable();",
+                    "    this.getFieldCountry().disable();",
+                    "    this.getFieldCity().reset();",
+                    "    this.getFieldCountry().reset();",
+                    "}"
+                ],
+                "name": "change"
+            },
+            "name": "onToggle",
+            "designerId": "46fb6926-82fb-4910-b16e-2d1daefb62ee"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainView",
+                "designer|params": [
+                    "carousel",
+                    "newVal",
+                    "oldVal"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onCarouselChange",
+                "implHandler": [
+                    "if (newVal.getItemId() == \"mainview\") {",
+                    "    this.getBtnBack().hide();",
+                    "    this.getBtnSettings().show();",
+                    "    ",
+                    "    Ext.ComponentQuery.query('titlebar')[0].setTitle('Do I need my Umbrella?');",
+                    "} else {",
+                    "    this.getBtnBack().show();",
+                    "    this.getBtnSettings().hide();",
+                    "    ",
+                    "    Ext.ComponentQuery.query('titlebar')[0].setTitle('Settings');",
+                    "}"
+                ],
+                "name": "activeitemchange"
+            },
+            "name": "onCarouselChange",
+            "designerId": "96a71e75-aa86-4160-a60f-ee856e50c328"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "this.getMainView().setActiveItem(1);",
+                    "Dinmu.utils.Functions.loadData();"
+                ]
+            },
+            "name": "launch",
+            "designerId": "3b6436fe-98cc-495c-a8fb-6f24f611459d"
+        }
+    ]
+}

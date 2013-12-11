@@ -1,0 +1,147 @@
+{
+    "type": "Ext.carousel.Carousel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "main",
+        "designer|userClassName": "Main",
+        "direction": "vertical",
+        "requires": [
+            "Ext.TitleBar"
+        ],
+        "xtype": null
+    },
+    "name": "MyCarousel",
+    "designerId": "829e2ac4-ef4d-48d1-8fba-08847b638d72",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "xtype",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "title"
+                ],
+                "docked": "top",
+                "title": "Do I need my  Umbrella?"
+            },
+            "name": "MyTitleBar",
+            "designerId": "5db5ee6b-b763-4de1-b05f-b2227d6a4b14",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "back",
+                        "align": null,
+                        "cls": [
+                            "back"
+                        ],
+                        "designer|uiInterfaceName": "back",
+                        "hidden": true,
+                        "text": "back",
+                        "ui": "back"
+                    },
+                    "name": "MyButton",
+                    "designerId": "176b479b-ffc3-441e-b25f-9030f630c2f3",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "settings",
+                        "align": "right",
+                        "designer|uiInterfaceName": "plain",
+                        "iconCls": "settings",
+                        "text": "",
+                        "ui": "plain"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "581cff22-34d9-4676-b4d2-0ca51f133faa",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "settingsview",
+            "designerId": "e8de1802-24f1-4e0e-83df-a0b3a2511790",
+            "masterInstanceId": "4cc031e7-2213-491e-bb19-63debe0fce7d"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "textview"
+                ],
+                "itemId": "mainview"
+            },
+            "name": "MyContainer1",
+            "designerId": "53b7d883-9f88-421e-a36b-44ea15a5f3d4"
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "footer"
+                ],
+                "designer|uiInterfaceName": "light",
+                "docked": "bottom",
+                "html": "<span>Powered by &copy; Sencha Touch</span>",
+                "ui": "light"
+            },
+            "name": "MyToolbar",
+            "designerId": "4b6fdc3c-6574-47b1-a9b9-1df93673ddbc"
+        }
+    ]
+}

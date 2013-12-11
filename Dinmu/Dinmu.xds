@@ -1,0 +1,58 @@
+{
+    "name": "Dinmu",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "4.0.1.45",
+            "frameworkVersion": "2.3.0.328"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "http://localhost/dinmu/dinmu",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "displayfield-ExtBox1-1314-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1360-inputEl": "Not Installed"
+    },
+    "xdsVersion": "3.0.1",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000004,
+    "framework": "touch23",
+    "viewOrderMap": {
+        "view": [
+            "829e2ac4-ef4d-48d1-8fba-08847b638d72",
+            "4cc031e7-2213-491e-bb19-63debe0fce7d"
+        ],
+        "store": [
+            "bb1df42d-9c87-417a-abb9-d79f559ebcb2"
+        ],
+        "controller": [
+            "2c574ea5-4ec0-4d79-bad9-3eb089d0d276"
+        ],
+        "model": [
+            "5e5754d7-4d94-4ada-baa1-5c0ad961f5d2"
+        ],
+        "resource": [
+            "9e635a5e-b2bf-4772-8bc6-449b25983eb4",
+            "ea7f52d7-7426-49b7-9406-6d8341e5235e",
+            "78051488-58e6-4693-93f7-fd7b1b6b3683"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

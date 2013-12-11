@@ -1,0 +1,129 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "settingsview",
+        "designer|userClassName": "SettingsView"
+    },
+    "name": "MyPanel",
+    "designerId": "4cc031e7-2213-491e-bb19-63debe0fce7d",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "instructions": "In case you do not want the app to detect your location you can enter the city and country.",
+                "title": "SettingsView"
+            },
+            "name": "MyFieldSet",
+            "designerId": "998e0620-39ac-4299-ada6-8db248d7281a",
+            "cn": [
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Auto Detect?",
+                        "labelWidth": "55%",
+                        "name": "geo",
+                        "value": 1
+                    },
+                    "name": "MyToggleField",
+                    "designerId": "97faa7ff-50c5-4252-8bee-b88817526f47"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "label": "Units",
+                        "name": "units",
+                        "options": [
+                            "[",
+                            "                    {",
+                            "                        text: 'Fahrenheit',",
+                            "                        value: 'f'",
+                            "                    },",
+                            "                    {",
+                            "                         text: 'Celsius',",
+                            "                         value: 'c'",
+                            "                    }]"
+                        ]
+                    },
+                    "name": "MySelectField",
+                    "designerId": "098d5800-7903-4001-aaff-89777355896f"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "label": "City",
+                        "name": "city"
+                    },
+                    "name": "MyTextField",
+                    "designerId": "71b8ab91-83c4-409f-83ba-8b04e2815648"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "label": "Country",
+                        "name": "country"
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "e4efaee3-6201-4a17-af9e-42e5c4c26a9d"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "refresh",
+                        "designer|uiInterfaceName": "confirm",
+                        "itemId": null,
+                        "margin": "10 5",
+                        "text": "Refresh",
+                        "ui": "confirm"
+                    },
+                    "name": "MyButton2",
+                    "designerId": "03f1f05a-0e90-4a9b-863c-2905c29914e1",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "Settings",
+        "model": "Setting",
+        "requires": [
+            "Dinmu.model.Setting"
+        ],
+        "storeId": "Settings"
+    },
+    "name": "MyStore",
+    "designerId": "bb1df42d-9c87-417a-abb9-d79f559ebcb2"
+}

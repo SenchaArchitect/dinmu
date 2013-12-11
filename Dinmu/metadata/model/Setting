@@ -1,0 +1,147 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Setting",
+        "identifier": "uuid",
+        "requires": [
+            "Ext.data.identifier.Uuid"
+        ]
+    },
+    "name": "MyModel",
+    "configAlternates": {
+        "identifier": "string"
+    },
+    "designerId": "5e5754d7-4d94-4ada-baa1-5c0ad961f5d2",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "type": "auto"
+            },
+            "name": "field",
+            "designerId": "4458bbc8-d1a6-452c-b0b5-088d4a527cf7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "city",
+                "type": "auto"
+            },
+            "name": "field1",
+            "designerId": "ed404141-d10b-4609-8a71-7ea74cd76eaf"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "country",
+                "type": "auto"
+            },
+            "name": "field2",
+            "designerId": "529ad9b1-b6b2-4b81-ac8d-171e5c825df2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "units",
+                "type": "auto"
+            },
+            "name": "field3",
+            "designerId": "440db5d3-734e-4e85-87dd-065d339fa47f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "geo",
+                "type": "boolean"
+            },
+            "name": "field4",
+            "designerId": "c0541081-003d-4b2c-868f-79caba2b534b"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "field": "city",
+                "message": "Please provide a city"
+            },
+            "name": "MyPresenceValidation",
+            "designerId": "013042b9-9fd0-481e-8291-0e7eafd07eba",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "message",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "field": "country",
+                "message": "Please provide a country"
+            },
+            "name": "MyPresenceValidation1",
+            "designerId": "13acd9bb-6641-4855-b74a-08e9717d3caf",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "message",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "weathersettings"
+            },
+            "name": "MyLocalStorageProxy",
+            "designerId": "89ef26e6-155d-4fae-95b7-bcc6cb0eda3a"
+        }
+    ]
+}

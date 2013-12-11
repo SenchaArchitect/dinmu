@@ -1,0 +1,23 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Main"
+        ],
+        "models": [
+            "Setting"
+        ],
+        "name": "Dinmu",
+        "views": [
+            "Main",
+            "SettingsView"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}
