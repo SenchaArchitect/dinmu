@@ -15,7 +15,7 @@
             },
             "viewportOrientation": "portrait"
         },
-        "urlPrefix": "http://localhost/dinmu/dinmu",
+        "urlPrefix": "http://localhost/dinmu/dinmu/build/testing/dinmu",
         "exportPath": "",
         "spacesToIndent": 4,
         "sdkPath": "",
@@ -25,7 +25,12 @@
         "buildShouldOverwriteIndex": true,
         "generateArchitectVersion": true,
         "displayfield-ExtBox1-1314-inputEl": "Not Installed",
-        "displayfield-ExtBox1-1360-inputEl": "Not Installed"
+        "displayfield-ExtBox1-1360-inputEl": "Not Installed",
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        },
+        "displayfield-ExtBox1-1286-inputEl": "Not Installed"
     },
     "xdsVersion": "3.0.1",
     "xdsBuild": 0,
